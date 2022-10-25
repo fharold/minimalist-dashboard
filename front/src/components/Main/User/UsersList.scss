@@ -1,0 +1,18 @@
+@import 'src/styles/shared';
+
+.users-page {
+  display: flex;
+  flex-flow: column;
+  color: $blue-light;
+  width: 100%;
+  max-width: px-to-rem(1130px);
+  font-size: px-to-rem(22px);
+  line-height: px-to-rem(29px);
+  padding-top: 3rem;
+
+  .centered-button {
+    align-self: center;
+    //margin: px-to-rem(16px) px-to-rem(16px) px-to-rem(16px) !important;
+    padding: 2rem;
+  }
+}

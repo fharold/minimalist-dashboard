@@ -1,0 +1,57 @@
+@import 'src/styles/shared';
+
+.dialog {
+  position: fixed;
+  z-index: 999 !important;
+  top:16.25rem;
+  left:0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+  background: white;
+  border: solid 1px $blue-medium;
+  border-radius: px-to-rem(15px);
+  width: fit-content;
+  height: 50vh;
+  align-items: center;
+  font-size: px-to-rem(20px);
+  padding: px-to-rem(60px);
+  min-width: px-to-rem(600px);
+  min-height: px-to-rem(300px);
+  max-height: calc(100vh - 16.25rem);
+  gap: px-to-rem(21px);
+  overflow-y: scroll;
+
+  .room-pick-list-item {
+    color: $grey-dark;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .dialog-close-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .button {
+    margin-top: 30px !important;
+    width: fit-content;
+  }
+
+  .dialog-main-text {
+    color: $grey-dark;
+    font-weight: 600;
+  }
+
+  .dialog-secondary-text {
+    color: $grey-border;
+    font-style: italic;
+  }
+}

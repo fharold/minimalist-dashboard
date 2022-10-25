@@ -1,0 +1,113 @@
+@import 'src/styles/shared';
+
+.config-box {
+  height: fit-content;
+  //padding-bottom: 1rem;
+  margin: px-to-rem(30px) 0;
+}
+
+.config-box-header {
+  display: flex;
+  flex-flow: row;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  min-height: px-to-rem(80px);
+  background: $blue-dark;
+  //padding: 0 0 0 px-to-rem(40px);
+  border: 1px solid $blue-dark;
+  border-radius: px-to-rem(13px);
+  margin-bottom: px-to-rem(30px);
+
+  //div {
+  //  display: flex;
+  //  flex-flow: row;
+  //  align-items: center;
+  //}
+
+  .config-box-header-label {
+    color: white;
+    font-size: px-to-rem(22px);
+    line-height: px-to-rem(29px);
+    @include font-serif();
+    margin-right: px-to-rem(24px);
+    margin-left: px-to-rem(40px);
+  }
+
+  .button {
+    margin: px-to-rem(5px) !important;
+  }
+
+  .button:active {
+    // override default button styles
+    background-color: white !important;
+  }
+}
+
+.config-box-content {
+  position: relative;
+  width: 100%;
+  padding: px-to-rem(40px);
+
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+
+  border-radius: px-to-rem(13px);
+  border: 1px solid $grey-border;
+
+  .config-box-content-item-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    &:not(:first-child) {
+      width: px-to-rem(200px);
+    }
+
+    .config-box-content-item-separator {
+      width: px-to-rem(80px);
+      float: left;
+      font-size: px-to-rem(49px);
+    }
+
+    .config-box-content-item {
+      float: right;
+      background-color: $blue-dark;
+
+      width: px-to-rem(120px);
+      height: px-to-rem(120px);
+
+      padding: px-to-rem(16px);
+      @include font-serif();
+      color: white;
+      word-wrap: anywhere;
+
+      // TEXT FORMAT BELOW
+      //flex: 50%;
+      //max-width: 50%;
+      //margin-top: px-to-rem(16px);
+      //margin-bottom: 0;
+      //font-size: px-to-rem(20px);
+      //line-height: px-to-rem(28px);
+      //color: $grey-border;
+    }
+  }
+
+  .config-box-3d-view {
+    position: absolute;
+    right: -1rem;
+    transform: translateX(100%);
+    // hack to center vertically
+    margin: auto;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+.room-pick-list-item:hover {
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}

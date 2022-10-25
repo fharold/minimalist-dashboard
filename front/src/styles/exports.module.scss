@@ -1,0 +1,8 @@
+@import 'partials/variables';
+@import 'partials/functions';
+
+// can only be imported if this file contains `*.module.scss`
+
+:export {
+  baseFontSize: $base-font-size;
+}

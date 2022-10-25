@@ -1,0 +1,250 @@
+@import 'src/styles/shared';
+
+.header {
+  //@include debug-child-div-random-background(10, 0.15); // TODO REMOVE DEBUG
+
+  z-index: 800; // above Main and Canvas
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: $header-height; //260px;#5895CC00
+  box-shadow: 0 3px 6px #00000029;
+  background: #FFFFFF 0 0 no-repeat padding-box;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+
+  &.loggedout {
+    justify-content: space-between;
+  }
+
+  //#region CHILDREN
+
+  .header-title-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    padding-left: px-to-rem(30px);
+
+    .loggedout {
+
+    }
+
+    .loggedin {
+      padding-top: px-to-rem(20px);
+    }
+
+    .room-name {
+      font-size: px-to-rem(30px);
+      line-height: px-to-rem(43px);
+      color: $grey-dark;
+      @include font-sans-serif();
+      margin-top: px-to-rem(16px);
+
+      &.customer {
+        color: $grey-dark;
+      }
+
+      &.sales, &.admin {
+        color: #FFFFFF;
+      }
+    }
+
+    .configuration-name {
+      @include font-serif();
+      width: auto;
+      font-weight: 400;
+      font-size: px-to-rem(48px);
+      line-height: px-to-rem(63px);
+      color: $configuration-name-color;
+
+      &.loggedout {
+        color: $blue-light;
+      }
+    }
+
+    .header-title {
+      display: flex;
+      flex-flow: column;
+    }
+
+    .border-wrapper {
+      border: solid 1px $blue-medium;
+      border-radius: 30px;
+      height: fit-content;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-around;
+
+      &.loggedin {
+        min-height: px-to-rem(160px);
+        margin-left: px-to-rem(50px);
+        margin-top: px-to-rem(35px);
+        padding-left: px-to-rem(174px);
+        padding-right: px-to-rem(63px);
+      }
+
+      &.loggedout {
+        border-color: $blue-light;
+        min-height: px-to-rem(90px);
+        margin-left: px-to-rem(50px);
+        padding-left: px-to-rem(110px);
+        padding-right: px-to-rem(63px);
+      }
+    }
+
+    .header-logo {
+      position: absolute;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .logo {
+        img {
+          height: px-to-rem(110px);
+          object-fit: contain;
+        }
+      }
+
+      .home {
+        height: px-to-rem(54px);
+        margin-bottom: px-to-rem(30px);
+      }
+    }
+  }
+
+  .header-catalogue {
+    flex: 1 1 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: px-to-rem(30px);
+
+    & > .button-icon {
+      box-shadow: 0 3px 6px #00000029;
+    }
+
+    //.catalogue {
+    //  //height: 58%;
+    //  height: px-to-rem(151px);
+    //  margin: 0;
+    //}
+  }
+
+  .header-menu {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-top: px-to-rem(5px);
+    padding-right: px-to-rem(40px);
+
+    color: $grey-dark;
+    font-size: px-to-rem(20px);
+
+    &.loggedout {
+      margin-top: px-to-rem(30px);
+    }
+
+    & > div {
+      height: px-to-rem(54px);
+      margin: px-to-rem(40px) px-to-rem(12px);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .back {
+      img {
+        height: px-to-rem(25px);
+      }
+
+      span {
+        font-size: px-to-rem(18px);
+        color: $grey-dark;
+        font-weight: 600;
+        @include font-sans-serif();
+      }
+    }
+
+    .profile {
+      img {
+        height: px-to-rem(48px);
+        cursor: pointer;
+      }
+    }
+
+    .logout {
+      img {
+        height: px-to-rem(48px);
+      }
+
+      span {
+        display: none;
+      }
+    }
+
+    .logout:hover {
+      span {
+        display: block;
+        position: absolute;
+        top: 80px;
+        flex-wrap: wrap;
+        text-align: center;
+
+        font-size: px-to-rem(16px);
+        line-height: px-to-rem(20px);
+        color: $grey-dark;
+        font-weight: 600;
+        @include font-sans-serif();
+      }
+    }
+
+    .language {
+      position: relative;
+      display: inline-block;
+
+      .language-dropdown-content {
+        // TODO fix dropdown centering relative to parent div
+        position: fixed; // will be visible even with overflow hidden
+        display: none;
+        background-color: $grey-light;
+        box-shadow: 0 .5rem 1rem 0 rgba(0, 0, 0, 0.2);
+        z-index: 1;
+
+        &.language-dropdown-opened {
+          display: block !important;
+        }
+      }
+
+      .language-dropdown-content a {
+        color: $grey-dark;
+        padding: .75rem 1rem;
+        text-decoration: none;
+        display: block;
+
+        &.language-dropdown-selected {
+          background-color: $blue-dark;
+          color: #FFFFFF;
+          pointer-events: none;
+        }
+
+        &:hover {
+          background-color: darken($grey-light, 5%);
+        }
+      }
+    }
+  }
+
+  //#endregion
+}

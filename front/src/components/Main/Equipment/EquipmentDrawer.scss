@@ -1,0 +1,95 @@
+@import 'src/styles/shared';
+
+.equipment-drawer {
+  z-index: 710; // above main & canvas
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: px-to-rem(692px);
+  height: 100%;
+  //overflow-y: auto;
+  overflow: hidden;
+
+  background-color: $blue-light;
+
+  transform: translateX(px-to-rem(692px-40px)); // keep collapsed div width
+  transition: transform $transition-delay-300 ease(out-cubic);
+
+  box-shadow: -3px 0 6px #00000029;
+
+  // VIEWER COMPONENT
+  .equipment-viewer {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  // CLOSE BUTTON
+  .equipment-drawer-close-button {
+    position: absolute;
+    top: px-to-rem(15px);
+    right: px-to-rem(15px);
+    width: px-to-rem(29px);
+    height: px-to-rem(29px);
+    z-index: 1;
+
+    @include background-hover("../../../public/assets/img/icon_close", "png");
+  }
+
+  // INACTIVE / HIDDEN
+  &.equipment-drawer-hidden {
+    transform: translateX(100%);
+    box-shadow: none;
+
+    .equipment-drawer-collapsed {
+      visibility: hidden;
+    }
+  }
+
+  // ACTIVE AND OPENED
+  &.equipment-drawer-expanded {
+    background-color: transparent;
+    transform: translateX(0);
+    transition-delay: 0s;
+    display: initial;
+  }
+
+  // ACTIVE AND CLOSED
+  .equipment-drawer-collapsed {
+    pointer-events: none;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $blue-light;
+    width: px-to-rem(40px);
+    height: 100%;
+    opacity: 0;
+    //border: 1px solid red;
+
+    // vertical text
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+    font-size: px-to-rem(22px);
+    font-weight: 600;
+    color: white;
+
+    transition: opacity 0s; // when opening hide instantly
+
+    &.equipment-drawer-collapsed-visible {
+      pointer-events: auto;
+      opacity: 1;
+      transition: opacity $transition-delay-300 ease(out-cubic); // when collapsing
+    }
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .equipment-drawer {
+    .equipment-drawer-collapsed-visible:hover,
+    .equipment-drawer-close-button:hover {
+      cursor: pointer;
+    }
+  }
+}

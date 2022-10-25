@@ -1,0 +1,49 @@
+//@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+//  100   Thin (Hairline)
+//  200   Extra Light (Ultra Light)
+//  300   Light
+//  400   Normal (Regular)
+//  500   Medium
+//  600   Semi Bold (Demi Bold)
+//  700   Bold
+//  800	  Extra Bold (Ultra Bold)
+//  900   Black (Heavy)
+
+//@import './MyriadPro.scss'; // TODO REMOVE DEBUG
+@import 'src/RobotoSlab';
+
+*, html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  //font-family: 'Roboto Slab', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif; // no mixin here
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+.myriad-override {
+  font-family: 'Myriad Pro', /*'Nunito Sans', 'Segoe UI', 'Ubuntu', system-ui,*/ serif !important;
+}
+
+#root {
+  height: 100vh;
+  --toastify-color-progress-light: #5895CC;
+  --toastify-font-family: 'Source Sans Pro', sans-serif;
+}

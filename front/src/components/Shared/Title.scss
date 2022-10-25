@@ -1,0 +1,15 @@
+@import 'src/styles/shared';
+
+.title-component { // renamed to avoid name collision with other title classes
+  @include font-serif();
+  color: $blue-light;
+  font-size: px-to-rem(40px);
+  text-align: center;
+  border: 1px solid $blue-light;
+  border-radius: 30px;
+  padding: px-to-rem(25px);
+
+  &.dark {
+    // TODO add background-color
+  }
+}

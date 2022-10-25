@@ -1,0 +1,13 @@
+@import 'src/styles/shared';
+
+.ceva-admin-dashboard {
+  margin-top: px-to-rem(100px);
+  width: px-to-rem(536px);
+  display: flex;
+  flex-flow: column;
+
+  & > * {
+    width: 100%;
+    margin: px-to-rem(15px) 0;
+  }
+}

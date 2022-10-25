@@ -1,0 +1,223 @@
+@import "node_modules/react-image-gallery/styles/scss/image-gallery";
+@import 'src/styles/shared';
+
+.equipment-viewer {
+  pointer-events: auto;
+  width: px-to-rem(692px);
+  position: relative;
+  height: fit-content;
+  display: flex;
+  flex-flow: column;
+  background-color: $grey-lighter;
+
+  svg {
+    display: flex; // prevent default bottom margin applied with "display: block"
+  }
+
+  p {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .equipment-title {
+    background-color: $blue-light;
+    padding: px-to-rem(31px) px-to-rem(60px) px-to-rem(25px);
+
+    * {
+
+      line-height: px-to-rem(63px);
+      margin: 0;
+      margin-block-start: 0;
+      margin-block-end: 0;
+    }
+
+    h1 {
+      flex: 1;
+      //line-height: px-to-rem(63px);
+      margin: 0;
+      color: white;
+      font-size: px-to-rem(48px);
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+
+  .equipment-content {
+    display: flex;
+    width: 100%;
+    //height: auto;
+    padding: px-to-rem(32px) px-to-rem(60px);
+    flex-direction: column;
+    overflow-y: auto;
+    flex-grow: 2;
+  }
+
+  a {
+    text-decoration: none; /* no underline */
+    color: black;
+  }
+
+  .slideshow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    //background-color: rgba(255,255,255,0.8);
+    background-color: red; // TODO EDIT
+    z-index: 999 !important; //above header
+
+    .close {
+      z-index: 1; // above images
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+    }
+
+    .image-gallery {
+      .image-gallery-content.fullscreen {
+        background-color: red; // TODO EDIT
+      }
+
+      background-color: red; // TODO EDIT
+    }
+
+    .image-gallery-content.fullscreen .image-gallery-icon {
+      position: fixed !important; // play & fullscreen buttons will be aligned with frame and not image size
+    }
+  }
+
+  .equipment-description {
+    margin: 0;
+    //padding: .5rem 0;
+    //flex-grow: 1;
+    font-size: px-to-rem(20px);
+    @include font-sans-serif();
+    line-height: px-to-rem(28px);
+    //max-height: 50%;
+    //overflow-y: auto;
+    //overflow-x: hidden;
+    color: $grey-dark;
+  }
+
+  .specs-title {
+    @include font-serif();
+    padding: px-to-rem(16px) px-to-rem(35px);
+    margin: px-to-rem(16px) 0;
+    display: block;
+    border-radius: px-to-rem(15px);
+    background: $blue-medium;
+    color: white;
+    font-size: px-to-rem(22px);
+    line-height: px-to-rem(29px);
+  }
+
+  .specs-content {
+    margin: 0;
+    width: 100%;
+
+    padding: px-to-rem(29px) px-to-rem(35px);
+
+    font-size: px-to-rem(20px);
+    @include font-sans-serif();
+    line-height: px-to-rem(28px);
+
+    background: white;
+    border: solid 1px $blue-dark;
+    border-radius: px-to-rem(15px);
+
+    ul {
+      list-style-position: inside;
+      list-style-type: square;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .equipment-footer {
+    //position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    display: flex;
+    flex-flow: row;
+
+    span {
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      font-family: "Myriad Pro", serif;
+      font-size: px-to-rem(16px);
+      line-height: px-to-rem(20px);
+    }
+
+    .vertical-btn {
+      display: flex;
+      width: 30%;
+      flex-flow: column;
+      background: $grey-light;
+      align-content: center;
+      align-items: center;
+      justify-content: space-around;
+      border-left: solid 3px $blue-medium;
+      padding: 1rem;
+      cursor: pointer;
+
+      &:hover {
+        background: $grey-lighter;
+      }
+
+      img {
+        height: 30px;
+        object-fit: contain;
+        margin-bottom: 10px;
+      }
+    }
+
+    .horizontal-btn {
+      display: flex;
+      width: 40%;
+      flex-flow: row;
+      background: $grey-light;
+      cursor: pointer;
+      padding: 1rem;
+      align-content: center;
+      align-items: center;
+      justify-content: space-around;
+
+      &:hover {
+        background: $grey-lighter;
+      }
+
+      img {
+        height: 40px;
+        object-fit: contain;
+        margin-right: px-to-rem(10px);
+        margin-left: px-to-rem(15px);
+      }
+    }
+
+    .btn-disabled {
+      cursor: auto;
+
+      &:hover {
+        background: $grey-light;
+      }
+
+      & > * {
+        opacity: 0.5;
+      }
+    }
+  }
+}

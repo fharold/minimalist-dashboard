@@ -1,0 +1,19 @@
+.debug-links-container {
+  position: absolute;
+  bottom: 0;
+  background-color: #00000080 !important;
+  display: flex;
+
+  a {
+    line-height: 1rem;
+    padding: 1rem;
+    color: #FFC300;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #000000ff;
+    }
+  }
+}
+

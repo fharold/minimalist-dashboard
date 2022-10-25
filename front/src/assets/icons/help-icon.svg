@@ -1,0 +1,20 @@
+<svg id="icon_help" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 54 54">
+    <defs>
+        <filter id="Ellipse_help">
+            <feOffset dx="2" dy="2" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="2" result="blur"/>
+<!--            <feFlood flood-opacity="0.161" result="color"/>-->
+            <feFlood flood-color="#3b4569" result="color"/>
+            <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+            <feComposite operator="in" in="color"/>
+            <feComposite operator="in" in2="SourceGraphic"/>
+        </filter>
+    </defs>
+    <circle cx="27" cy="27" r="27" fill="#f6f7f9"/>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Ellipse_help)">
+        <circle cx="27" cy="27" r="27" fill="#fff"/>
+    </g>
+    <text transform="translate(19 42)" fill="#fff" font-size="40" font-family="Myriad Pro">
+        <tspan x="0" y="0">?</tspan>
+    </text>
+</svg>

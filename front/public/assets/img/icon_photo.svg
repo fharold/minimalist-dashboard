@@ -1,0 +1,37 @@
+<svg id="icon_photo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44.999" height="33.618" viewBox="0 0 44.999 33.618">
+  <defs>
+    <filter id="Tracé_54">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feFlood flood-color="#707070" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="Tracé_53">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1" result="blur-2"/>
+      <feFlood flood-color="#707070" result="color-2"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-2"/>
+      <feComposite operator="in" in="color-2"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Groupe_27" data-name="Groupe 27" transform="translate(-0.5 5)">
+    <g data-type="innerShadowGroup">
+      <path id="Tracé_54-2" data-name="Tracé 54" d="M32,.5H4.106A3.627,3.627,0,0,0,.5,4.149V22.89a3.627,3.627,0,0,0,3.606,3.65H32a3.627,3.627,0,0,0,3.607-3.649h0V4.149A3.627,3.627,0,0,0,32,.5Z" transform="translate(9.893 -5.499)" fill="#f6f7f9"/>
+      <g transform="matrix(1, 0, 0, 1, 0.5, -5)" filter="url(#Tracé_54)">
+        <path id="Tracé_54-3" data-name="Tracé 54" d="M32,.5H4.106A3.627,3.627,0,0,0,.5,4.149V22.89a3.627,3.627,0,0,0,3.606,3.65H32a3.627,3.627,0,0,0,3.607-3.649h0V4.149A3.627,3.627,0,0,0,32,.5Z" transform="translate(9.39 -0.5)" fill="#fff"/>
+      </g>
+    </g>
+    <g data-type="innerShadowGroup">
+      <path id="Tracé_53-2" data-name="Tracé 53" d="M35.5.5h-31A3.974,3.974,0,0,0,.5,4.441V24.678a3.974,3.974,0,0,0,4.007,3.941h31a3.974,3.974,0,0,0,4.008-3.94h0V4.441A3.974,3.974,0,0,0,35.5.5Z" fill="#f6f7f9"/>
+      <g transform="matrix(1, 0, 0, 1, 0.5, -5)" filter="url(#Tracé_53)">
+        <path id="Tracé_53-3" data-name="Tracé 53" d="M35.5.5h-31A3.974,3.974,0,0,0,.5,4.441V24.678a3.974,3.974,0,0,0,4.007,3.941h31a3.974,3.974,0,0,0,4.008-3.94h0V4.441A3.974,3.974,0,0,0,35.5.5Z" transform="translate(-0.5 5)" fill="#fff"/>
+      </g>
+    </g>
+    <path id="Tracé_50" data-name="Tracé 50" d="M16.779,16.035l4.995,9.816a1.763,1.763,0,0,1-1.541,2.576h-9.99A1.764,1.764,0,0,1,8.7,25.851L13.7,16.035a1.722,1.722,0,0,1,3.082,0" transform="translate(-1.216 -2.216)" fill="#373737"/>
+    <path id="Tracé_51" data-name="Tracé 51" d="M30.421,9.173l7.314,14.373a2.582,2.582,0,0,1-2.256,3.771H20.851a2.582,2.582,0,0,1-2.256-3.771L25.909,9.173a2.522,2.522,0,0,1,4.512,0" transform="translate(-2.706 -1.106)" fill="#373737"/>
+    <path id="Tracé_52" data-name="Tracé 52" d="M11.2,7.292A2.707,2.707,0,1,1,8.489,4.586,2.706,2.706,0,0,1,11.2,7.292" transform="translate(-0.803 -0.621)" fill="#373737"/>
+  </g>
+</svg>

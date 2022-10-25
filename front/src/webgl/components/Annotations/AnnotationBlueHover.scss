@@ -1,0 +1,128 @@
+@import 'src/styles/shared';
+
+$circle-width: 40px;
+$circle-radius: $circle-width / 2;
+$dark-color: #182793;
+$light-color: #748dbe;
+
+.annotation-container {
+  pointer-events: none;
+  user-select: none;
+
+  .annotation.blueHover {
+    pointer-events: none; // prevent tooltip from blocking hover on other markers
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(2px); // TODO keep this?
+
+    min-width: unset !important;
+    border-radius: 100rem !important; // round
+    border: none !important;
+    //box-shadow: none !important;
+    box-shadow: 0.2rem 0.2rem 0.5rem 0 rgba(black, 0.2) !important;
+
+    transform-origin: center center;
+    transform: translate(-50%, -50%);
+
+    //transition: all 0.3s;
+
+    &.visible {
+      opacity: 1;
+    }
+
+    .title {
+      color: $dark-color;
+      //width: 50%;
+      padding: 0.75rem 1.5rem;
+      display: inline-block;
+      white-space: nowrap;
+
+      font-size: 1.15rem;
+      font-weight: 700;
+
+      &.tablet {
+        font-size: 1rem;
+        padding: .75rem;
+      }
+
+      &.mobile {
+        font-size: 0.85rem;
+        padding: .5rem;
+      }
+    }
+  }
+
+  .annotation-circle.blueHover {
+    width: px-to-rem($circle-width);
+    height: px-to-rem($circle-width);
+    position: absolute;
+    transform: translate(-50%, -50%) scale(1);
+
+    pointer-events: visibleFill; // TODO doesn't seem to work?
+
+    animation: sinus 1s alternate infinite ease-in-out;
+
+    box-sizing: content-box;
+
+    circle#backCircle {
+      fill: $dark-color;
+      cx: px-to-rem($circle-radius) !important;
+      cy: px-to-rem($circle-radius);
+      r: px-to-rem(18px);
+    }
+
+    circle#frontCircle {
+      fill: transparent;
+      stroke: $light-color;
+      stroke-width: px-to-rem(5px);
+      cx: px-to-rem($circle-radius) !important;
+      cy: px-to-rem($circle-radius);
+      r: px-to-rem(12px);
+
+      transition: all 0.3s ease;
+    }
+
+    text {
+      text-anchor: middle;
+      fill: white;
+      font-size: px-to-rem(16px);
+      font-weight: 600;
+      transform: scale(1);
+      transform-origin: px-to-rem($circle-radius);
+
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .annotation-container {
+    .annotation-circle.blueHover {
+      &:hover {
+        animation: none;
+        transform: translate(-50%, -50%) scale(1.25);
+        cursor: pointer;
+
+        circle#frontCircle {
+          stroke: white;
+          stroke-width: px-to-rem(2px);
+          r: px-to-rem(18px);
+        }
+
+        text {
+          //font-size: px-to-rem(24px);
+          transform: scale(1.5);
+        }
+      }
+    }
+  }
+}
+
+@keyframes sinus {
+  0% {
+    transform: translate(-50%, -50%) scale(1.25);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

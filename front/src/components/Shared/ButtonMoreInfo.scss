@@ -1,0 +1,27 @@
+@import "/src/styles/shared";
+
+.button-more-info {
+  cursor: pointer;
+  border: solid 1px $blue-light;
+  border-radius: px-to-rem(32px);
+  height: px-to-rem(64px);
+  width: fit-content;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: px-to-rem(16px);
+  padding-left: px-to-rem(16px);
+  padding-right: px-to-rem(16px);
+  text-decoration: none;
+  color: $grey-dark;
+
+  img {
+    height: px-to-rem(36px);
+    width: px-to-rem(36px);
+  }
+
+  p {
+    flex-grow: 1;
+    text-align: center;
+  }
+}

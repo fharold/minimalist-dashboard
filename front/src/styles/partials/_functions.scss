@@ -1,0 +1,26 @@
+@import './variables';
+
+@function px-to-rem($size, $pxRef: $base-font-size) {
+  $rem-size: $size / $pxRef;
+
+  @return #{$rem-size}rem;
+}
+
+@function get-main-color($account-type) {
+  @if $account-type == 'sales' {
+    @return $sales-header-color;
+  } @else if $account-type == 'admin' {
+    @return $admin-header-color;
+  } @else { // customer & other
+    @return $customer-header-color;
+  }
+}
+
+@function ease($key) {
+  @if map-has-key($ease, $key) {
+    @return map-get($ease, $key);
+  }
+
+  @warn "Unkown '#{$key}' in $ease.";
+  @return null;
+}

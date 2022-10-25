@@ -1,0 +1,22 @@
+<svg id="icon_close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="29" height="29" viewBox="0 0 29 29">
+  <defs>
+    <filter id="Ellipse_2">
+      <feOffset dx="2" dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feFlood flood-opacity="0.33" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g data-type="innerShadowGroup">
+    <circle id="Ellipse_2-2" data-name="Ellipse 2" cx="14.5" cy="14.5" r="14.5" fill="#fff"/>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Ellipse_2)">
+      <circle id="Ellipse_2-3" data-name="Ellipse 2" cx="14.5" cy="14.5" r="14.5" fill="#fff"/>
+    </g>
+  </g>
+  <path id="Tracé_44" data-name="Tracé 44" d="M8.366,9.581,18.884,20.1" transform="translate(0.875 -0.34)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="2"/>
+  <g id="Groupe_24" data-name="Groupe 24" transform="translate(0.875 -0.34)">
+    <path id="Tracé_45" data-name="Tracé 45" d="M8.366,9.581,18.884,20.1" transform="translate(28.465 1.215) rotate(90)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="2"/>
+  </g>
+</svg>

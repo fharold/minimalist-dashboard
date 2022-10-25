@@ -1,0 +1,31 @@
+key;fr;en
+loggedOutHeaderTitle;Connexion;Login
+logout;Déconnexion;Logout
+back;Retour;Back
+rootRedirect;Redirection en cours. Si vous êtes bloqués sur cette page, cliquez <a href="/">ici</a>;Lost ?
+cevaAdminDashboardSalesRepBtn;Commerciaux;Sales representative
+cevaAdminDashboardCustomerBtn;Clients;Customers
+cevaAdminDashboardConfigurationEditor;Editeur de configurations;Configuration editor
+cevaAdminDashboardTranslation;Traduction;Translation
+cevaAdminDashboardLanguages;Langues;Translations
+loginPageUsernamePlaceholder;Nom d'utilisateur;Username
+loginPagePasswordPlaceholder;Mot de passe;Password
+loginPageError;Les identifiants renseignés ne nous permettent pas de vous authentifier.;Invalid credentials
+loginPageSubmitBtn;OK;OK
+languagesPageTitle;Langues;Translations
+languagesPageAdd;Ajouter une langue;Add new language
+languagesPageLoading;Chargement des langues;Loading languages
+createLanguagePageConfirmation;Langue créée;Language created
+createLanguagePageFormNameLabel;Nom de la langue;Language name
+createLanguagePageFormNamePlaceholder;Nom de la langue;Language name
+createLanguagePageFormCodeLabel;Code de la langue;Language code
+createLanguagePageFormCodePlaceholder;Code de la langue (ex. : EN, DE, FR, ES, ...);Language code (ex. : EN, DE, FR, ES, ...)
+createLanguageTooltip;Le code de la langue est affiché lors d'un clic sur l'icône Langue;The language code is shown when clicking on the Language icon
+createLanguagePageFormLanguageIconTitle;Editer l'icône de la langue;Edit language icon
+createLanguagePageFormCsvLabel;Editer un .csv;Edit .csv file
+createLanguagePageFormCsvPlaceholder;Sélectionner un fichier;Select a file
+createLanguagePageFormVisibleLabel;Visible;Visible
+createLanguagePageFormSubmitBtn;Sauvegarder;Save settings
+createLanguagePageFormCancelBtn;Annuler;Cancel
+equipmentsPageFailedFetch;Impossible de récupérer les équipements;Failed to fetch equipments
+equipmentsPageChooseAnElementToEdit:Choisissez un élément à modifier :;Choose an element to edit :
