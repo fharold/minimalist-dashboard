@@ -1,1 +1,0 @@
-export type ProgressListener = (progressEvent: ProgressEvent) => void;

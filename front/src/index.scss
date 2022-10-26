@@ -13,10 +13,10 @@
 //  900   Black (Heavy)
 
 //@import './MyriadPro.scss'; // TODO REMOVE DEBUG
-@import 'src/RobotoSlab';
 
 *, html {
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -28,22 +28,4 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   user-select: none;
-}
-
-img {
-  -webkit-user-drag: none;
-  -khtml-user-drag: none;
-  -moz-user-drag: none;
-  -o-user-drag: none;
-  user-drag: none;
-}
-
-.myriad-override {
-  font-family: 'Myriad Pro', /*'Nunito Sans', 'Segoe UI', 'Ubuntu', system-ui,*/ serif !important;
-}
-
-#root {
-  height: 100vh;
-  --toastify-color-progress-light: #5895CC;
-  --toastify-font-family: 'Source Sans Pro', sans-serif;
 }
