@@ -1,6 +1,6 @@
 {
-  "short_name": "Hatchery Layout",
-  "name": "Ceva - Standard Hatchery Layout",
+  "short_name": "db",
+  "name": "dashboard",
   "icons": [
     {
       "src": "favicon.ico",

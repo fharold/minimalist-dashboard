@@ -4,16 +4,14 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from "./components/App";
 import {enableMapSet} from "immer";
-import {BrowserHistory, createBrowserHistory} from "history";
-
-export const DEFAULT_LOCALE = "en"; // TODO move to DefaultValues.ts ?
-export const customHistory: BrowserHistory = createBrowserHistory();
+import {ServiceRepository} from "./services/serviceRepository";
 
 window.addEventListener('contextmenu', function (e) {
     e.preventDefault();
 });
 
 enableMapSet();
+ServiceRepository.getInstance();//invoke to start nested services
 
 ReactDOM.render(
     <React.StrictMode>
