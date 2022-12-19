@@ -320,14 +320,6 @@
     [
       "cc48083d-974b-4ca1-b55c-da309bca582b",
       ""
-    ],
-    [
-      "ea674623-e3e2-4fd5-af98-055f36c76a34",
-      "POWER_SWITCH"
-    ],
-    [
-      "fced915c-a61d-4909-a894-aca31655c231",
-      "SPEAKER_DRIVER"
     ]
   ],
   "text_variables": {}

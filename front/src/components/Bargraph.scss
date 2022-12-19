@@ -1,0 +1,65 @@
+.bargraph {
+  position: relative;
+  width: 18mm;
+  border: solid 1px white;
+  height: 60mm;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 2.5mm;
+
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+
+  .title {
+    position: absolute;
+    font-size: 5mm;
+    top: -4mm;
+    white-space: pre;
+    background: black;
+    text-align: center;
+    padding-left: 1mm;
+    padding-right: 1mm;
+  }
+
+  .vertical-layout {
+    position: absolute;
+    display: flex;
+    flex-flow: row;
+    right: 2mm;
+    justify-items: center;
+    flex-grow: 1;
+    gap: 2mm;
+  }
+
+  .label {
+    position: relative;
+    font-size: 5mm;
+
+    &.max {
+      top: 12mm;
+    }
+
+    &.min {
+      bottom: 2mm;
+    }
+  }
+
+  .graph {
+    width: 7mm;
+    background: darkred;
+    display: flex;
+    height: 100%;
+    flex-flow: column;
+    align-items: center;
+    justify-content: end;
+    margin-top: 12mm;
+    margin-bottom: 2mm;
+
+    .value {
+      background: red;
+      width: 100%;
+    }
+  }
+}
