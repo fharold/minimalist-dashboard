@@ -39,15 +39,14 @@ export default class Bargraph extends React.Component<BargraphProps, BargraphSta
                 <p className={'label max'}>{this.props.maxLabel}</p>
                 <div className={'graph'}>
                     {
-                        [...Array(segmentsCount)].map((x, i) =>
-                            <div
+                        [...Array(segmentsCount)].map((x, i) => {
+                            let scaledValue = (this.props.value - this.props.minValue) / (this.props.maxValue - this.props.minValue) * (segmentsCount - 1);
+                            return <div
                                 className={"led"}
-                                style={{background: this.props.getColor(this.props.value)}}>
+                                style={{background: i >= scaledValue && i !== 0 ? "#303030" : this.props.getColor(this.props.value)}}>
                                 {x}
-                            </div>)
-                        /*
-                        TODO : create 12 independents segments of 50px height with 4px spacing between them.
-                         */
+                            </div>
+                        })
                     }
                     {/*<div className={'value'} style={{height: `${(this.props.value - this.props.minValue) / (this.props.maxValue - this.props.minValue) * 100}%`}}/>*/}
                 </div>
