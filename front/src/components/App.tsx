@@ -2,49 +2,77 @@ import React from 'react';
 
 import './App.scss';
 import {ServiceRepository} from "../services/serviceRepository";
-import Bargraph from "./Bargraph";
+import Bargraph, {SENSORS_NAME} from "./Bargraph";
 
 const App: React.FC = () => {
-
     return (
         <div className="app">
             <Bargraph
-                title={"Oil\n(°C)"}
+                sensor={SENSORS_NAME.OIL_T}
+                getColor={(value: number) => {
+                    return "#FF0000"
+                }}
                 maxValue={130}
                 maxLabel={"130"}
                 minValue={50}
                 minLabel={"50"}
-                value={120} />
+                value={130}
+            />
             <Bargraph
-                title={"Oil\n(bar)"}
+                sensor={SENSORS_NAME.OIL_P}
+                getColor={(value: number) => {
+                    return "#FF0000"
+                }}
                 maxValue={8}
                 maxLabel={"8"}
                 minValue={0}
                 minLabel={"0"}
                 value={1.5} />
             <Bargraph
-                title={"Water\n(°C)"}
+                sensor={SENSORS_NAME.WATER_T}
+                getColor={(value: number) => {
+                    return "#FF0000"
+                }}
                 maxValue={120}
                 maxLabel={"120"}
                 minValue={60}
                 minLabel={"60"}
                 value={90} />
             <Bargraph
-                title={"EGT\n(°C)"}
-                maxValue={1000}
-                maxLabel={"1000"}
+                sensor={SENSORS_NAME.EGT}
+                getColor={(value: number) => {
+                    return "#FF0000"
+                }}
+                maxValue={999}
+                maxLabel={"999"}
                 minValue={0}
                 minLabel={"0"}
                 value={200} />
             <Bargraph
-                title={"Fuel\n(L)"}
+                sensor={SENSORS_NAME.LAMBDA}
+                getColor={(value: number) => {
+                    return "#FF0000"
+                }}
+                maxValue={14.7}
+                maxLabel={"14.7"}
+                minValue={10}
+                minLabel={"10"}
+                value={11.5} />
+            <Bargraph
+                sensor={SENSORS_NAME.FUEL}
+                getColor={(value: number) => {
+                    return "#FF0000"
+                }}
                 maxValue={40}
                 maxLabel={"40"}
                 minValue={0}
                 minLabel={"0"}
                 value={30} />
             <Bargraph
-                title={"Boost\n(bar)"}
+                sensor={SENSORS_NAME.BOOST}
+                getColor={(value: number) => {
+                    return "#FF0000"
+                }}
                 maxValue={1.5}
                 maxLabel={"1.5"}
                 minValue={-1}

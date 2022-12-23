@@ -1,65 +1,54 @@
-.bargraph {
+.container {
   position: relative;
-  width: 18mm;
-  border: solid 1px white;
-  height: 60mm;
+  width: 200px;
+  border: solid 3px white;
+  height: 960px;
   top: 0;
   bottom: 0;
   margin: auto;
-  border-radius: 2.5mm;
+  border-radius: 50px;
 
   align-items: center;
   display: flex;
   flex-flow: column;
 
-  .title {
-    position: absolute;
-    font-size: 5mm;
-    top: -4mm;
-    white-space: pre;
-    background: black;
-    text-align: center;
-    padding-left: 1mm;
-    padding-right: 1mm;
+  .bargraph {
+    margin-top: 64px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 100%;
   }
 
-  .vertical-layout {
+  .title {
     position: absolute;
-    display: flex;
-    flex-flow: row;
-    right: 2mm;
-    justify-items: center;
-    flex-grow: 1;
-    gap: 2mm;
+    top: -64px;
+    background: black;
+    object-fit: none;
+    height: 128px;
+    width: 128px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .label {
-    position: relative;
-    font-size: 5mm;
-
-    &.max {
-      top: 12mm;
-    }
-
-    &.min {
-      bottom: 2mm;
-    }
+    font-size: 80px;
   }
 
   .graph {
-    width: 7mm;
-    background: darkred;
     display: flex;
     height: 100%;
+    width: 128px;
     flex-flow: column;
     align-items: center;
-    justify-content: end;
-    margin-top: 12mm;
-    margin-bottom: 2mm;
+    justify-content: space-evenly;
+    background: darkgray;
 
-    .value {
+    .led {
       background: red;
-      width: 100%;
+      height: 45px;
+      width: 112px;
     }
   }
 }

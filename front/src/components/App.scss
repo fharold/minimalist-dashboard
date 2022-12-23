@@ -1,16 +1,13 @@
 //@import 'src/styles/shared';
 
 .app {
-  margin: auto;
-  width: 122mm;
-  height: 69mm;
+  margin-top: 90px;
   //background: #303030;
   background: black;
   color: white;
   font-size: 40px;
   display: flex;
   flex-flow: row;
-  justify-content: space-evenly;
-  gap: 1mm;
+  justify-content: space-around;
 }
 
